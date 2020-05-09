@@ -1,10 +1,16 @@
-var Person = require('./Person')
+const User = require('./buildPattern');
 
 // Employees
-var sue = new Person('Sue', true, true, 60);
-var bill = new Person('Bill', true, false, 20);
-var phil = new Person('Phil', true, false);
+const sue = new User('Sue').makeEmployee().makeManager(40).build();
+const bill = new User('Bill').makeEmployee().makePartTime().build();
+const phil = new User('Phil').makeEmployee().build();
 
 // Shoppers
-var charles = new Person('Charles', false, false, 0, 500, ['jeans', 'sunglasses']);
-var tabbitha = new Person('Tabbitha', false, false, 0, 1000);
+const charles = new User('Charles')
+  .money(500)
+  .list(['jeans', 'sunglasses'])
+  .build();
+const tabbitha = new User('Tabbitha').money(1000).build();
+
+console.log(sue.toString());
+console.log(charles.toString());

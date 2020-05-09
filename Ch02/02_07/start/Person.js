@@ -1,18 +1,16 @@
 class Person {
+  constructor(Build) {
+    this.name = Build.name;
+    this.isEmployee = Build.isEmployee;
+    this.isManager = Build.isManager;
+    this.hours = Build.hours;
+    this.money = Build.money;
+    this.shoppingList = Build.shoppingList;
+  }
 
-    constructor(name, isEmployee=false, isManager=false, hours=40, money=0, shoppingList=[] ) {
-        this.name = name
-        this.isEmployee = isEmployee;
-        this.isManager = isManager;
-        this.hours = hours;
-        this.money = money;
-        this.shoppingList = shoppingList;
-    }
-
-    toString() {
-        return JSON.stringify(this);
-    }
-
+  toString() {
+    return JSON.stringify(this);
+  }
 }
 
 module.exports = Person;
