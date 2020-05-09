@@ -1,18 +1,12 @@
-var Shopper = require('./Shopper');
+var Scout = require('./scout_prototype');
 
-var alex = new Shopper('Alex Banks');
-alex.addItemToList('camping knife');
-alex.addItemToList('tent');
-alex.addItemToList('backpack');
-alex.addItemToList('map');
+var alex = Scout.clone();
+alex.name = 'Alex';
 alex.addItemToList('slingshot');
 
-var eve = new Shopper('Eve Porcello');
-eve.addItemToList('camping knife');
-eve.addItemToList('tent');
-eve.addItemToList('backpack');
-eve.addItemToList('map');
+var eve = Scout.clone();
+eve.name = 'Eve';
 eve.addItemToList('reading light');
 
-console.log( `${alex.name}: ${alex.shoppingList}` );
-console.log( `${eve.name}: ${eve.shoppingList}` );
+console.log(`${alex.name}: ${alex.shoppingList}`);
+console.log(`${eve.name}: ${eve.shoppingList}`);
