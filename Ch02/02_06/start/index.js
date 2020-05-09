@@ -1,8 +1,8 @@
-var Shopper = require('./Shopper');
-var Employee = require('./Employee');
+const user = require('./userFactory');
 
-var alex = new Shopper('Alex Banks', 100);
-var eve = new Employee('Eve Porcello', 100, 'This and That');
+var alex = user('Alex Banks', 100);
+var eve = user('Eve Porcello', 100, 'This and That');
 
-console.log( alex.toString() )
-console.log( eve.toString() )
+eve.payDay(100);
+console.log(alex.toString());
+console.log(eve.toString());
